@@ -5,7 +5,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-    var data = fs.readFile(path);
+    var data = fs.readFileSync(path);
     response.send(data.toString());
 });
 
