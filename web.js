@@ -1,11 +1,11 @@
 var express = require('express');
 var fs = require('fs');
-var path = require('./index.html');
+//var path = require('./index.html');
 var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-    //var data = fs.readFileSync(path);
+    var data = fs.readFileSync('./index.html');
     //response.send(data.toString());
     response.send("hello");
 });
